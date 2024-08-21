@@ -1,0 +1,31 @@
+
+syntax = "proto3";
+
+package protobufs;
+
+option go_package = "./protobufs";
+
+
+service HelloService {
+
+  rpc HelloApi (HelloApiRequest) returns (HelloApiResponse);
+
+}
+
+
+message HelloApiRequest{
+  bool type = 1;
+  bool my_test = 2;
+
+}
+message HelloApiResponse{
+  string message = 1;
+//  repeated SimilarVars similar_vars = 1;
+}
+
+//message SimilarVars{
+//  string var1 = 1;
+//  string var2 = 2;
+//  string var3 = 3;
+//}
+
